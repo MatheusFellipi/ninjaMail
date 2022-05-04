@@ -1,0 +1,24 @@
+import type { NextPage } from 'next'
+import { Box } from '@chakra-ui/react'
+import Header from '../components/heeader'
+import Video from '../components/video'
+import Thumb from '../components/thumb'
+
+const Home: NextPage = () => {
+  return (
+    <>
+      <Header />
+      <Box bgColor="red" mt={'8px'} h={[324.22, 250, 500]} w={[300, 711, 500]}>
+        This is a box
+      </Box>
+      <Box mt={'41.78px'} w={'100%'}>
+        <Video />
+      </Box>
+      <Box mt={33}>
+        <Thumb />
+      </Box>
+    </>
+  )
+}
+
+export default Home
