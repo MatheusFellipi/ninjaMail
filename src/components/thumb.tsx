@@ -6,7 +6,7 @@ const Thumb = () => {
     <Box maxW={209} h={294} borderWidth="1px" shadow={'lg'}>
       <Image src="/img/thumb.png" alt="thumb.png" />
 
-      <Box px={'25px'}>
+      <Box px={'25px'} mt={'17px'}>
         <Box
           as="p"
           fontSize={'12px'}
