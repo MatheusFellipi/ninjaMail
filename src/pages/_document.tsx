@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:ital,wght@0,500;0,800;1,800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:ital,wght@0,500;0,800;0,900;1,800&display=swap"
             rel="stylesheet"
           />
         </Head>
