@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react'
 import Header from '../components/heeader'
 import Video from '../components/video'
 import Thumb from '../components/thumb'
+import CaseStudy from '../components/casestudy'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,10 @@ const Home: NextPage = () => {
       </Box>
       <Box mt={33}>
         <Thumb />
+      </Box>
+
+      <Box mt={47}>
+        <CaseStudy />
       </Box>
     </>
   )
