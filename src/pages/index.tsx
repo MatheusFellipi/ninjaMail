@@ -7,6 +7,7 @@ import {
   Heading,
   Image,
   Input,
+  Stack,
   VStack,
 } from '@chakra-ui/react'
 import Header from '../components/heeader'
@@ -29,29 +30,37 @@ const Home: NextPage = () => {
       </Box>
 
       <Flex
-        flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-        justify={'center'}
+        flexDirection={{ xl: 'column', md: 'column', sm: 'column' }}
         align={'center'}
         mt={47}
         mb={54}
       >
-        <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
-          <CaseStudy />
-          <CaseStudy />
-          <CaseStudy />
+        <Flex
+          w={{ xl: '1089px ', md: '708px', sm: '239px' }}
+          flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
+        >
+          <Stack
+            direction={{ xl: 'row', md: 'row', sm: 'column' }}
+            spacing="21px"
+            w={{ xl: '1089px ', md: '708px', sm: '239px' }}
+          >
+            <CaseStudy description="Member since 2012" name="Frankie" />
+            <CaseStudy description="Member since 2016" name="Camile" />
+            <CaseStudy description="Member since 2018" name="Elayne" />
+          </Stack>
         </Flex>
 
         <Box>
           <Box
             as="h1"
-            w={'239px'}
-            h={'155px'}
+            maxW={{ xl: '850px ', md: '544px', sm: '239px' }}
+            h={{ xl: '126px ', md: '89px', sm: '155px' }}
             mt={'59px'}
             fontFamily={'heading'}
             fontWeight={'black'}
             textAlign="center"
-            lineHeight={{ lg: '48px ', md: '36px', sm: '36px' }}
-            fontSize={{ lg: '44px', md: '48px', sm: '26px' }}
+            lineHeight={{ xl: '48px ', md: '38px', sm: '36px' }}
+            fontSize={{ xl: '44px', md: '28px', sm: '26px' }}
           >
             Learn how others are reaching their audience easier than ever
             before.
@@ -61,10 +70,10 @@ const Home: NextPage = () => {
             justify={'center'}
             align={'center'}
             textAlign="center"
-            flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+            flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
           >
             <Box mt={'5px'}>
-              <Input type="text" />
+              <Input type="text" placeholder="Enter your email" />
               <Box as="p" mt={'6px'} color={'green'}>
                 Thanks! Email received
               </Box>
@@ -124,16 +133,16 @@ const Home: NextPage = () => {
 
       <Box as="footer">
         <Flex
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-          mb={{ lg: '56.14px', md: '37.72px', sm: '11.72px' }}
-          ml={{ lg: '228px', md: '63px', sm: '17px' }}
+          flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
+          mb={{ xl: '56.14px', md: '37.72px', sm: '11.72px' }}
+          ml={{ xl: '228px', md: '63px', sm: '17px' }}
         >
           <Flex
             w={'155px'}
             h={'52px'}
             align={'center'}
             ml="10px"
-            mt={{ lg: '82px', md: '47px', sm: '47px' }}
+            mt={{ xl: '82px', md: '47px', sm: '47px' }}
           >
             <Box width={84} height={42} mt={'12px'}>
               <Image src="/icon/ninjamail.svg" alt="ninjamail" />
@@ -153,11 +162,11 @@ const Home: NextPage = () => {
           </Flex>
 
           <Flex
-            mt={{ lg: '88px', md: '51px', sm: '3.73px' }}
-            ml={{ lg: '194.61px', md: '128.97', sm: '17px' }}
+            mt={{ xl: '88px', md: '51px', sm: '3.73px' }}
+            ml={{ xl: '194.61px', md: '128.97', sm: '17px' }}
             fontWeight={'bold'}
             fontFamily={'text'}
-            fontSize={{ lg: '19px', md: '"12px"', sm: '12px' }}
+            fontSize={{ xl: '19px', md: '"12px"', sm: '12px' }}
             lineHeight={'14px'}
           >
             <Box>
@@ -200,20 +209,20 @@ const Home: NextPage = () => {
 
         <Divider h={'1px'} colorScheme="#DBDBDB" orientation="horizontal" />
         <Flex
-          mt={{ lg: '39px', md: '25px', sm: '22px' }}
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          mt={{ xl: '39px', md: '25px', sm: '22px' }}
+          flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
           justify={'center'}
           align={'cemter'}
         >
           <Box
             as="p"
             ml={'17px'}
-            mr={{ lg: '98px', md: '93px', sm: '0' }}
-            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            mr={{ xl: '98px', md: '93px', sm: '0' }}
+            fontSize={{ xl: '15px', md: '9px', sm: '9px' }}
             lineHeight={'18px'}
             fontFamily={'text'}
             fontWeight={700}
-            maxW={{ lg: '561px', md: '333px', sm: '186px' }}
+            maxW={{ xl: '561px', md: '333px', sm: '186px' }}
           >
             NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All
             rights reserved.
@@ -222,9 +231,9 @@ const Home: NextPage = () => {
           <Box
             as="p"
             ml={'17px'}
-            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
-            mt={{ sm: '14px' }}
-            mr={{ lg: '30px', md: '35px', sm: '0' }}
+            fontSize={{ xl: '15px', md: '9px', sm: '9px' }}
+            mt={{ xl: '0', md: '0', sm: '14px' }}
+            mr={{ xl: '30px', md: '35px', sm: '0' }}
             lineHeight={'18px'}
             fontFamily={'text'}
             fontWeight={700}
@@ -235,8 +244,8 @@ const Home: NextPage = () => {
           <Box
             as="p"
             ml={'17px'}
-            mb={{ lg: '39px', md: '30px', sm: '51px' }}
-            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            mb={{ xl: '39px', md: '30px', sm: '51px' }}
+            fontSize={{ xl: '15px', md: '9px', sm: '9px' }}
             lineHeight={'19px'}
             fontFamily={'text'}
             fontWeight={700}
