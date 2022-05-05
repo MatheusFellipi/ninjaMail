@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import {
   Box,
-  Center,
+  Button,
   Divider,
   Flex,
   Heading,
@@ -30,9 +30,55 @@ const Home: NextPage = () => {
       <Box mt={47}>
         <CaseStudy />
       </Box>
-      <Box as="footer" h={'486px'}>
-        <Box>
-          <Flex w={'155px'} h={'52px'} align={'center'} ml="10px">
+
+      <Flex
+        flexDirection={'column'}
+        align="center"
+        justify={'space-between'}
+        as={'section'}
+        pt={'42px'}
+        pb={'59px'}
+        bgColor="#4BA87D"
+        h={'290px'}
+        width={'100%'}
+      >
+        <Box
+          as="h1"
+          fontFamily={'heading'}
+          fontSize={'42px'}
+          lineHeight={'48px'}
+          fontWeight={'black'}
+          textAlign={'center'}
+          color={'white'}
+        >
+          Get started today!
+        </Box>
+        <Button
+          borderRadius={0}
+          w={'131px'}
+          h={'42px'}
+          fontSize={'13px'}
+          lineHeight={'15px'}
+          fontWeight={'black'}
+          color={'#4BA87D'}
+        >
+          PICK A PLAN
+        </Button>
+      </Flex>
+
+      <Box as="footer">
+        <Flex
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          mb={{ lg: '56.14px', md: '37.72px', sm: '11.72px' }}
+          ml={{ lg: '228px', md: '63px', sm: '17px' }}
+        >
+          <Flex
+            w={'155px'}
+            h={'52px'}
+            align={'center'}
+            ml="10px"
+            mt={{ lg: '82px', md: '47px', sm: '47px' }}
+          >
             <Box width={84} height={42} mt={'12px'}>
               <Image src="/icon/ninjamail.svg" alt="ninjamail" />
             </Box>
@@ -51,11 +97,11 @@ const Home: NextPage = () => {
           </Flex>
 
           <Flex
-            mt={'3.73px'}
-            ml={'17px'}
-            fontWeight={700}
+            mt={{ lg: '88px', md: '51px', sm: '3.73px' }}
+            ml={{ lg: '194.61px', md: '128.97', sm: '17px' }}
+            fontWeight={'bold'}
             fontFamily={'text'}
-            fontSize="12px"
+            fontSize={{ lg: '19px', md: '"12px"', sm: '12px' }}
             lineHeight={'14px'}
           >
             <Box>
@@ -94,41 +140,55 @@ const Home: NextPage = () => {
               </VStack>
             </Box>
           </Flex>
-        </Box>
+        </Flex>
 
-        <Box>
-          <Center height="50px">
-            <Divider orientation="horizontal" />
-          </Center>
+        <Divider h={'1px'} colorScheme="#DBDBDB" orientation="horizontal" />
+        <Flex
+          mt={{ lg: '39px', md: '25px', sm: '22px' }}
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          justify={'center'}
+          align={'cemter'}
+        >
           <Box
             as="p"
             ml={'17px'}
-            fontSize={'9px'}
-            lineHeight={'19px'}
+            mr={{ lg: '98px', md: '93px', sm: '0' }}
+            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            lineHeight={'18px'}
             fontFamily={'text'}
             fontWeight={700}
-            maxW={'186px'}
-            h={'53px'}
+            maxW={{ lg: '561px', md: '333px', sm: '186px' }}
           >
-            NinjaMail is a sample project for Quest AI.
-            <br />© 2019 Quest AI, All rights reserved.
+            NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All
+            rights reserved.
           </Box>
 
           <Box
             as="p"
             ml={'17px'}
-            fontSize={'9px'}
-            lineHeight={'19px'}
+            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            mr={{ lg: '30px', md: '35px', sm: '0' }}
+            lineHeight={'18px'}
             fontFamily={'text'}
             fontWeight={700}
             maxW={'186px'}
-            h={'53px'}
           >
             Terms & Conditions
-            <br />
+          </Box>
+
+          <Box
+            as="p"
+            ml={'17px'}
+            mb={{ lg: '39px', md: '30px', sm: '51px' }}
+            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            lineHeight={'19px'}
+            fontFamily={'text'}
+            fontWeight={700}
+            maxW={'186px'}
+          >
             Privacy Policy
           </Box>
-        </Box>
+        </Flex>
       </Box>
     </>
   )
