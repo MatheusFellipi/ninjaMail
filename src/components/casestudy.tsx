@@ -1,6 +1,11 @@
 import { Box, Heading } from '@chakra-ui/react'
 
-const CaseStudy = () => {
+interface ICaseStudyProps {
+  description: string
+  name: string
+}
+
+const CaseStudy = ({ description, name }: ICaseStudyProps) => {
   const caseStudyStyles = {
     display: 'flex',
     alignItems: 'start',
@@ -21,7 +26,7 @@ const CaseStudy = () => {
         fontWeight={900}
         ml={17.06}
       >
-        Frankie
+        {name}
       </Heading>
       <Heading
         mb={4.66}
@@ -31,7 +36,7 @@ const CaseStudy = () => {
         fontFamily={'text'}
         fontWeight={700}
       >
-        Frankie
+        {description}
       </Heading>
     </Box>
   )
