@@ -8,7 +8,8 @@ import {
   Image,
   Input,
   Stack,
-  VStack,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react'
 import Header from '../components/heeader'
 import Video from '../components/video'
@@ -19,30 +20,154 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <Box bgColor="red" mt={'8px'} h={[324.22, 250, 500]} w={[300, 711, 500]}>
-        This is a box
-      </Box>
-      <Box mt={'41.78px'} w={'100%'}>
+
+      <Flex bgImage="url('/img/bg2.png')" bgRepeat="no-repeat" h="631.5px">
+        <Box
+          mt={'8px'}
+          w={{ lg: '1088px ', md: '711px', sm: '301px' }}
+          h={{ lg: '383px ', md: '250px', sm: '324.22px' }}
+        >
+          <Box
+            w={{ lg: '1088px ', md: '711px', sm: '300px' }}
+            h={{ lg: '383px ', md: '250px', sm: '169px' }}
+          >
+            <Image src="/img/photo_hero.png" />
+          </Box>
+          <Box>
+            <Box
+              as={'h1'}
+              maxW={{ sm: '267px' }}
+              maxH={{ sm: '138px' }}
+              fontFamily={'heading'}
+              fontSize={{ sm: '36px' }}
+              fontWeight={'black'}
+              lineHeight={{ sm: '46px' }}
+            >
+              Create Stunning Email Campaigns
+            </Box>
+            <Box
+              as={'p'}
+              mt={{ sm: '98px' }}
+              fontFamily={'text'}
+              fontSize={{ sm: '14px' }}
+              fontWeight={'medium'}
+              lineHeight={{ sm: '16px' }}
+              maxW={{ sm: '290px' }}
+              maxH={{ sm: '32px' }}
+            >
+              Create and launch email campaigns that captivate your customers in
+              just a few clicks.
+            </Box>
+
+            <Box mt={{ sm: '16px' }}>
+              <Button
+                borderRadius={0}
+                w={'131px'}
+                mr={{ sm: '17px' }}
+                h={'42px'}
+                fontSize={'13px'}
+                lineHeight={'15px'}
+                fontWeight={'black'}
+                bgColor={'#4BA87D'}
+                color={'white'}
+              >
+                TRY NOW
+              </Button>
+              <Button
+                borderRadius={0}
+                border="4px"
+                borderColor="#4BA87D"
+                w={'131px'}
+                h={'42px'}
+                fontSize={'13px'}
+                lineHeight={'15px'}
+                fontWeight={'black'}
+                color={'#4BA87D'}
+              >
+                GET A DEMO
+              </Button>
+            </Box>
+          </Box>
+        </Box>
+      </Flex>
+
+      <Flex justify={'center'} justifyContent={'center'} mt={'41.78px'}>
         <Video />
-      </Box>
-      <Box mt={33}>
-        <Thumb />
-      </Box>
+      </Flex>
 
       <Flex
-        flexDirection={{ xl: 'column', md: 'column', sm: 'column' }}
+        mt={33}
+        justifyContent={'center'}
+        p={2}
+        alignItems="center"
+        w={'100%'}
+      >
+        <Flex
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          maxW={{ lg: '1098px', md: '710px', sm: '302px' }}
+        >
+          <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
+            <Thumb
+              description="Launch campaigns but also find new customers. Our unique platform handles campaigns from start to end."
+              href="#"
+              img="thumb"
+            />
+            <Thumb
+              ml={{ lg: '47px', md: '30.71px', sm: '92.71px' }}
+              mt={{ lg: '88px', md: '57.84px', sm: '14.84px' }}
+              mr={{ lg: '46px', md: '29px', sm: '0' }}
+              description="Start building and sharing with your team today. NinjaMail is renowned for its industry leading team collaboration tools."
+              href="#"
+              img="thumb"
+            />
+          </Flex>
+
+          <Box
+            ml={{ lg: '0', md: '0', sm: '28px ' }}
+            mt={{ lg: '138px', md: '90px', sm: '14.84px' }}
+          >
+            <Box
+              mt={'18px'}
+              as="h1"
+              fontFamily={'heading'}
+              fontWeight={900}
+              fontSize={'28px'}
+              lineHeight={'31px'}
+              maxW={{ lg: 1098, md: 710, sm: 232 }}
+            >
+              The source for proven, engaging email campaigns
+            </Box>
+            <Box
+              as="p"
+              mt={'17px'}
+              fontFamily={'text'}
+              fontWeight={500}
+              fontSize={'12px'}
+              lineHeight={'16px'}
+              maxW={{ lg: 1098, md: 710, sm: 203 }}
+            >
+              Whether you’re a startup, small business, e-commerce store, or
+              want to promote your app, NinjaMail has the feature set tailored
+              for your business.
+            </Box>
+          </Box>
+        </Flex>
+      </Flex>
+
+      <Flex
+        flexDirection={'column'}
         align={'center'}
-        mt={47}
+        mt={{ lg: 133, md: 87, sm: 47 }}
         mb={54}
       >
         <Flex
-          w={{ xl: '1089px ', md: '708px', sm: '239px' }}
-          flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
+          w={{ lg: '1089px ', md: '708px', sm: '239px' }}
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
         >
           <Stack
-            direction={{ xl: 'row', md: 'row', sm: 'column' }}
+            direction={{ lg: 'row', md: 'row', sm: 'column' }}
             spacing="21px"
-            w={{ xl: '1089px ', md: '708px', sm: '239px' }}
+            w={{ lg: '1089px ', md: '708px', sm: '239px' }}
           >
             <CaseStudy description="Member since 2012" name="Frankie" />
             <CaseStudy description="Member since 2016" name="Camile" />
@@ -53,14 +178,14 @@ const Home: NextPage = () => {
         <Box>
           <Box
             as="h1"
-            maxW={{ xl: '850px ', md: '544px', sm: '225px' }}
-            h={{ xl: '126px ', md: '89px', sm: '155px' }}
+            maxW={{ lg: '850px ', md: '544px', sm: '225px' }}
+            h={{ lg: '126px ', md: '89px', sm: '155px' }}
             mt={'59px'}
             fontFamily={'heading'}
             fontWeight={'black'}
             textAlign="center"
-            lineHeight={{ xl: '48px ', md: '38px', sm: '36px' }}
-            fontSize={{ xl: '44px', md: '28px', sm: '26px' }}
+            lineHeight={{ lg: '48px ', md: '38px', sm: '36px' }}
+            fontSize={{ lg: '44px', md: '28px', sm: '26px' }}
           >
             Learn how others are reaching their audience easier than ever
             before.
@@ -69,27 +194,31 @@ const Home: NextPage = () => {
             mt={'5px'}
             justify={{ md: 'space-around', sm: 'center' }}
             align={{ md: 'start', sm: 'center' }}
-            flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
-            maxW={{ xl: '668px', md: '438px', sm: '223px' }}
+            flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+            maxW={{ lg: '668px', md: '438px', sm: '223px' }}
           >
             <Flex
               mt={'5px'}
               textAlign="center"
               flexDirection={'column'}
-              alignItems={{ xl: 'flex-start', md: 'flex-start', sm: 'center' }}
+              alignItems={{
+                lg: 'flex-start',
+                md: 'flex-start',
+                sm: 'center',
+              }}
             >
               <Input
                 type="text"
-                w={{ xl: '420px', md: '275px', sm: '223px ' }}
-                h={{ xl: '65px', md: '42px', sm: '42px ' }}
+                w={{ lg: '420px', md: '275px', sm: '223px ' }}
+                h={{ lg: '65px', md: '42px', sm: '42px ' }}
                 borderRadius={5}
                 placeholder="Enter your email"
               />
               <Box
                 as="p"
-                w={{ xl: '254px', md: '157px', sm: '142px ' }}
-                h={{ xl: '25px', md: '15px', sm: '14px ' }}
-                fontSize={{ xl: '21px', md: '13px ', sm: '12px ' }}
+                w={{ lg: '254px', md: '157px', sm: '142px ' }}
+                h={{ lg: '25px', md: '15px', sm: '14px ' }}
+                fontSize={{ lg: '21px', md: '13px ', sm: '12px ' }}
                 mt={'6px'}
                 color={'green'}
               >
@@ -101,7 +230,7 @@ const Home: NextPage = () => {
               mt={'7px'}
               borderRadius={0}
               w={'131px'}
-              h={{ xl: '65px', md: '42px', sm: '42px ' }}
+              h={{ lg: '65px', md: '42px', sm: '42px ' }}
               fontSize={'13px'}
               lineHeight={'15px'}
               fontWeight={'black'}
@@ -151,16 +280,15 @@ const Home: NextPage = () => {
 
       <Box as="footer">
         <Flex
-          flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
-          mb={{ xl: '56.14px', md: '37.72px', sm: '11.72px' }}
-          ml={{ xl: '228px', md: '63px', sm: '17px' }}
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          mb={{ lg: '56.14px', md: '37.72px', sm: '11.72px' }}
         >
           <Flex
             w={'155px'}
             h={'52px'}
             align={'center'}
-            ml="10px"
-            mt={{ xl: '82px', md: '47px', sm: '47px' }}
+            mt={{ lg: '82px', md: '47px', sm: '47px' }}
+            ml={{ lg: '228px', md: '63px', sm: '17px' }}
           >
             <Box width={84} height={42} mt={'12px'}>
               <Image src="/icon/ninjamail.svg" alt="ninjamail" />
@@ -180,67 +308,61 @@ const Home: NextPage = () => {
           </Flex>
 
           <Flex
-            mt={{ xl: '88px', md: '51px', sm: '3.73px' }}
-            ml={{ xl: '194.61px', md: '128.97', sm: '17px' }}
+            mt={{ lg: '79px', md: '51px', sm: '3.73px' }}
+            ml={{ lg: '194.61px', md: '128.97', sm: '17px' }}
             fontWeight={'bold'}
             fontFamily={'text'}
-            fontSize={{ xl: '19px', md: '"12px"', sm: '12px' }}
+            fontSize={{ lg: '19px', md: '"12px"', sm: '12px' }}
             lineHeight={'14px'}
           >
-            <Box>
-              <VStack
-                flexDirection={'column'}
-                align={'flex-start'}
-                textAlign="initial"
-                spacing="7px"
-              >
-                <span>Pricing</span>
-                <span>Services</span>
-                <span>Partners</span>
-                <span>About Us</span>
-                <span>Tutorials</span>
-                <span>Resources</span>
-                <span>Help Center</span>
-                <span>Templates</span>
-                <span>Case Studies</span>
-              </VStack>
-            </Box>
-            <Box ml={'72px'}>
-              <VStack
-                flexDirection={'column'}
-                align={'flex-start'}
-                textAlign="initial"
-                spacing="7px"
-              >
-                <span>Medium</span>
-                <span>Twitter</span>
-                <span>Facebook</span>
-                <span>Instagram</span>
-                <span>LinkedIn</span>
-                <span>Contact Us</span>
-                <span>Slack</span>
-                <span>Jobs</span>
-              </VStack>
-            </Box>
+            <Wrap>
+              <WrapItem flexDirection={'column'}>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>Services</p>
+                <p>Partners</p>
+              </WrapItem>
+              <WrapItem flexDirection={'column'}>
+                <p>About Us</p>
+                <p>Tutorials</p>
+                <p>Resources</p>
+                <p>Help Center</p>
+                <p>Templates</p>
+                <p>Case Studies</p>
+              </WrapItem>
+              <WrapItem flexDirection={'column'}>
+                <p>Medium</p>
+                <p>Twitter</p>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>LinkedIn</p>
+              </WrapItem>
+              <WrapItem flexDirection={'column'}>
+                <p>Contact Us</p>
+                <p>Slack</p>
+                <p>Jobs</p>
+              </WrapItem>
+            </Wrap>
           </Flex>
         </Flex>
 
         <Divider h={'1px'} colorScheme="#DBDBDB" orientation="horizontal" />
+
         <Flex
-          mt={{ xl: '39px', md: '25px', sm: '22px' }}
-          flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
+          mt={{ lg: '39px', md: '25px', sm: '22px' }}
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
           justify={'center'}
           align={'cemter'}
         >
           <Box
             as="p"
             ml={'17px'}
-            mr={{ xl: '98px', md: '93px', sm: '0' }}
-            fontSize={{ xl: '15px', md: '9px', sm: '9px' }}
+            mr={{ lg: '98px', md: '93px', sm: '0' }}
+            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
             lineHeight={'18px'}
             fontFamily={'text'}
             fontWeight={700}
-            maxW={{ xl: '561px', md: '333px', sm: '186px' }}
+            maxW={{ lg: '561px', md: '338px', sm: '186px' }}
           >
             NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All
             rights reserved.
@@ -249,9 +371,9 @@ const Home: NextPage = () => {
           <Box
             as="p"
             ml={'17px'}
-            fontSize={{ xl: '15px', md: '9px', sm: '9px' }}
-            mt={{ xl: '0', md: '0', sm: '14px' }}
-            mr={{ xl: '30px', md: '35px', sm: '0' }}
+            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            mt={{ lg: '0', md: '0', sm: '14px' }}
+            mr={{ lg: '30px', md: '35px', sm: '0' }}
             lineHeight={'18px'}
             fontFamily={'text'}
             fontWeight={700}
@@ -262,8 +384,8 @@ const Home: NextPage = () => {
           <Box
             as="p"
             ml={'17px'}
-            mb={{ xl: '39px', md: '30px', sm: '51px' }}
-            fontSize={{ xl: '15px', md: '9px', sm: '9px' }}
+            mb={{ lg: '39px', md: '30px', sm: '51px' }}
+            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
             lineHeight={'19px'}
             fontFamily={'text'}
             fontWeight={700}
