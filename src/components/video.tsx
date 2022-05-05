@@ -16,7 +16,12 @@ const Video = () => {
   }
 
   return (
-    <Flex flexWrap="wrap" w={304} h={171} justifyContent="space-evenly">
+    <Flex
+      w={{ lg: '944px', md: '616px ', sm: '304px' }}
+      h={{ lg: '531px', md: '347px ', sm: '171px' }}
+      flexWrap="wrap"
+      justifyContent="space-evenly"
+    >
       <Box sx={basicBoxStyles} w={'100%'}>
         <Heading
           lineHeight={'29px'}
