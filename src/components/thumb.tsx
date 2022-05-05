@@ -28,7 +28,7 @@ const Thumb = ({ description, href, img }: IThumbProps) => {
     >
       <Image src={`/img/${img}.png`} alt="thumb.png" />
 
-      <Box px={'25px'} mt={'17px'}>
+      <Box px={'14px'} mt={'16px'}>
         <Box
           as="p"
           fontSize={'12px'}
