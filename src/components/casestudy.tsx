@@ -14,11 +14,15 @@ const CaseStudy = ({ description, name }: ICaseStudyProps) => {
     textAlign: 'center',
     color: 'white',
     fontSize: '20px',
-    background: 'url(/img/VIDEO.png) center/cover no-repeat',
+    background: `url(/img/${name}.png) center/cover no-repeat`,
   }
 
   return (
-    <Box sx={caseStudyStyles} w={'223px'} h={'157px'}>
+    <Box
+      sx={caseStudyStyles}
+      w={{ xl: '341px ', md: '223px', sm: '223px' }}
+      h={{ xl: '239px ', md: '157px', sm: '157px' }}
+    >
       <Heading
         lineHeight={'26px'}
         fontSize={'22px'}
