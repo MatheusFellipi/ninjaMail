@@ -53,7 +53,7 @@ const Home: NextPage = () => {
         <Box>
           <Box
             as="h1"
-            maxW={{ xl: '850px ', md: '544px', sm: '239px' }}
+            maxW={{ xl: '850px ', md: '544px', sm: '225px' }}
             h={{ xl: '126px ', md: '89px', sm: '155px' }}
             mt={'59px'}
             fontFamily={'heading'}
@@ -67,23 +67,41 @@ const Home: NextPage = () => {
           </Box>
           <Flex
             mt={'5px'}
-            justify={'center'}
-            align={'center'}
-            textAlign="center"
+            justify={{ md: 'space-around', sm: 'center' }}
+            align={{ md: 'start', sm: 'center' }}
             flexDirection={{ xl: 'row', md: 'row', sm: 'column' }}
+            maxW={{ xl: '668px', md: '438px', sm: '223px' }}
           >
-            <Box mt={'5px'}>
-              <Input type="text" placeholder="Enter your email" />
-              <Box as="p" mt={'6px'} color={'green'}>
+            <Flex
+              mt={'5px'}
+              textAlign="center"
+              flexDirection={'column'}
+              alignItems={{ xl: 'flex-start', md: 'flex-start', sm: 'center' }}
+            >
+              <Input
+                type="text"
+                w={{ xl: '420px', md: '275px', sm: '223px ' }}
+                h={{ xl: '65px', md: '42px', sm: '42px ' }}
+                borderRadius={5}
+                placeholder="Enter your email"
+              />
+              <Box
+                as="p"
+                w={{ xl: '254px', md: '157px', sm: '142px ' }}
+                h={{ xl: '25px', md: '15px', sm: '14px ' }}
+                fontSize={{ xl: '21px', md: '13px ', sm: '12px ' }}
+                mt={'6px'}
+                color={'green'}
+              >
                 Thanks! Email received
               </Box>
-            </Box>
+            </Flex>
 
             <Button
               mt={'7px'}
               borderRadius={0}
               w={'131px'}
-              h={'42px'}
+              h={{ xl: '65px', md: '42px', sm: '42px ' }}
               fontSize={'13px'}
               lineHeight={'15px'}
               fontWeight={'black'}
