@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   Image,
+  Input,
   VStack,
 } from '@chakra-ui/react'
 import Header from '../components/heeader'
@@ -27,9 +28,64 @@ const Home: NextPage = () => {
         <Thumb />
       </Box>
 
-      <Box mt={47}>
-        <CaseStudy />
-      </Box>
+      <Flex
+        flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+        justify={'center'}
+        align={'center'}
+        mt={47}
+        mb={54}
+      >
+        <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
+          <CaseStudy />
+          <CaseStudy />
+          <CaseStudy />
+        </Flex>
+
+        <Box>
+          <Box
+            as="h1"
+            w={'239px'}
+            h={'155px'}
+            mt={'59px'}
+            fontFamily={'heading'}
+            fontWeight={'black'}
+            textAlign="center"
+            lineHeight={{ lg: '48px ', md: '36px', sm: '36px' }}
+            fontSize={{ lg: '44px', md: '48px', sm: '26px' }}
+          >
+            Learn how others are reaching their audience easier than ever
+            before.
+          </Box>
+          <Flex
+            mt={'5px'}
+            justify={'center'}
+            align={'center'}
+            textAlign="center"
+            flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          >
+            <Box mt={'5px'}>
+              <Input type="text" />
+              <Box as="p" mt={'6px'} color={'green'}>
+                Thanks! Email received
+              </Box>
+            </Box>
+
+            <Button
+              mt={'7px'}
+              borderRadius={0}
+              w={'131px'}
+              h={'42px'}
+              fontSize={'13px'}
+              lineHeight={'15px'}
+              fontWeight={'black'}
+              bgColor={'#4BA87D'}
+              color={'white'}
+            >
+              JOIN OUR LIST
+            </Button>
+          </Flex>
+        </Box>
+      </Flex>
 
       <Flex
         flexDirection={'column'}
@@ -167,6 +223,7 @@ const Home: NextPage = () => {
             as="p"
             ml={'17px'}
             fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
+            mt={{ sm: '14px' }}
             mr={{ lg: '30px', md: '35px', sm: '0' }}
             lineHeight={'18px'}
             fontFamily={'text'}
@@ -175,7 +232,6 @@ const Home: NextPage = () => {
           >
             Terms & Conditions
           </Box>
-
           <Box
             as="p"
             ml={'17px'}
