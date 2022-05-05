@@ -12,4 +12,10 @@ export const theme = extendTheme({
       },
     },
   },
+
+  breakpoints: {
+    sm: '320px',
+    md: '768px',
+    xl: '1200px',
+  },
 })
