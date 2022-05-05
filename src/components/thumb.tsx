@@ -1,7 +1,24 @@
 import { Box, Image } from '@chakra-ui/react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
-const Thumb = () => {
+interface IThumbProps {
+  description: string
+  href: string
+  img: string
+}
+
+const Thumb = ({ description, href, img }: IThumbProps) => {
+  const [link, setLink] = useState('#')
+
+  useEffect(() => {
+    if (href === undefined) {
+      setLink('#')
+    } else {
+      setLink(href)
+    }
+  }, [href])
+
   return (
     <Box
       w={{ xl: 320, md: 209.28, sm: 209 }}
@@ -9,7 +26,7 @@ const Thumb = () => {
       borderWidth="1px"
       shadow={'lg'}
     >
-      <Image src="/img/thumb.png" alt="thumb.png" />
+      <Image src={`/img/${img}.png`} alt="thumb.png" />
 
       <Box px={'25px'} mt={'17px'}>
         <Box
@@ -19,10 +36,9 @@ const Thumb = () => {
           fontFamily={'text'}
           fontWeight={500}
         >
-          Launch campaigns but also find new customers. Our unique platform
-          handles campaigns from start to end.
+          {description}
         </Box>
-        <Link href="#">
+        <Link href={link}>
           <Box
             as={'a'}
             fontSize={'12px'}
