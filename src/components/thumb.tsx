@@ -1,8 +1,8 @@
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Image, BoxProps } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-interface IThumbProps {
+interface IThumbProps extends BoxProps {
   description: string
   href: string
   img: string
