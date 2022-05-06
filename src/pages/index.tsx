@@ -9,6 +9,7 @@ import {
   Image,
   Input,
   Stack,
+  Text,
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'
@@ -264,76 +265,77 @@ const Home: NextPage = () => {
       </Flex>
 
       <Flex
-        justify={{ md: 'center', sm: 'center' }}
-        align={{ md: 'center', sm: 'center' }}
+        justify={'center'}
+        align={'center'}
         flexDirection={'column'}
-        maxW={{ lg: '296px', md: '617px', sm: '281px' }}
-        maxH={{ lg: '317px', md: '138px', sm: '242px' }}
-        mt={{ lg: '', md: '50px', sm: '54px' }}
-        mb={{ lg: '', md: '', sm: '58px' }}
-        ml={{ lg: '', md: '75px', sm: '0px' }}
-        mr={{ lg: '', md: '75px', sm: '0px' }}
+        mt={{ lg: '75px', md: '50px', sm: '54px' }}
+        mb={{ lg: '146px', md: '', sm: '58px' }}
+        ml={{ lg: '248px', md: '75px', sm: '20px' }}
+        mr={{ lg: '248px', md: '75px', sm: '20px' }}
         textAlign="center"
       >
         <Box
-          maxW={{ lg: '296px', md: '315px', sm: '281px' }}
-          maxH={{ lg: '317px', md: '208px', sm: '110px' }}
           as={'h1'}
+          maxW={{ lg: '426px', md: '315px', sm: '281px' }}
+          maxH={{ lg: '124px', md: '208px', sm: '110px' }}
+          fontSize={{ lg: '44px', md: '38px', sm: '26px' }}
+          lineHeight={{ lg: '48px', md: '46px', sm: '36px' }}
           fontFamily={'heading'}
-          fontSize={{ md: '38px', sm: '26px' }}
           fontWeight={'black'}
-          lineHeight={{ md: '46px', sm: '36px' }}
         >
           All the best brands already use us.
         </Box>
 
         <Flex
-          mt={{ lg: '', md: 'px', sm: '40px' }}
+          mt={{ lg: '39px', md: '20px', sm: '40px' }}
           flexWrap={{ sm: 'wrap' }}
           justify={'center'}
           align={'center'}
-          w={{ lg: '296px', md: '100%', sm: '237px' }}
-          maxH={{ lg: '317px', md: '31px', sm: '137px' }}
+          maxW={{ lg: '926px', md: '605px', sm: '237px' }}
         >
           <Image
-            mr={{ lg: '', md: '42px', sm: '67px' }}
-            maxW={{ lg: '', md: '', sm: '55px' }}
-            maxH={{ lg: '', md: '', sm: '29px' }}
+            mr={{ lg: '43px', md: '32px', sm: '67px' }}
+            maxW={{ lg: '85px', md: '55px', sm: '55px' }}
+            maxH={{ lg: '44px', md: '29px', sm: '29px' }}
             src="/icon/dragon_eye.svg"
             alt="dragon eye vodka"
             objectFit="cover"
           />
+
           <Image
-            mr={{ lg: '', md: '42px', sm: '0' }}
-            maxW={{ lg: '', md: '', sm: '91px' }}
-            maxH={{ lg: '', md: '', sm: '15px' }}
+            mr={{ lg: '43px', md: '32px', sm: '0' }}
+            maxW={{ lg: '138px', md: '91px', sm: '91px' }}
+            maxH={{ lg: '22px', md: '15px', sm: '15px' }}
             src="/icon/gamecommerce.svg"
             alt="gamecommerce"
             objectFit="cover"
           />
+
           <Image
-            mt={{ lg: '', md: '0px', sm: '29px' }}
-            mr={{ lg: '', md: '42px', sm: '41px' }}
-            maxW={{ lg: '', md: '', sm: '104px' }}
-            maxH={{ lg: '', md: '', sm: '22px' }}
+            mt={{ lg: '0px', md: '0px', sm: '29px' }}
+            mr={{ lg: '43px', md: '33px', sm: '41px' }}
+            maxW={{ lg: '160px', md: '104px', sm: '104px' }}
+            maxH={{ lg: '33px', md: '22px', sm: '22px' }}
             src="/icon/last_knight.svg"
             alt="last knight"
             objectFit="cover"
           />
+
           <Image
-            mr={{ lg: '', md: '24px', sm: '0' }}
+            mr={{ lg: '43px', md: '24px', sm: '0' }}
             mt={{ lg: '', md: '0px', sm: '30px' }}
-            maxW={{ lg: '', md: '', sm: '92px' }}
-            maxH={{ lg: '', md: '', sm: '17px' }}
+            maxW={{ lg: '141px', md: '92px', sm: '92px' }}
+            maxH={{ lg: '48px', md: '17px', sm: '17px' }}
             src="/icon/radio.svg"
             alt="radio tree"
             objectFit="cover"
           />
+
           <Image
-            mr={{ lg: '', md: '42px', sm: '0px' }}
-            mt={{ lg: '', md: '0px', sm: '29px' }}
-            maxW={{ lg: '', md: '', sm: '94px' }}
-            maxH={{ lg: '', md: '', sm: '31px' }}
+            mr={{ lg: '43px', md: '33px', sm: '0px' }}
+            mt={{ lg: '0px', md: '0px', sm: '29px' }}
+            maxW={{ lg: '145px', md: '94px', sm: '94px' }}
+            maxH={{ lg: '48px', md: '31px', sm: '31px' }}
             src="/icon/questai.svg"
             alt="quest ai"
             objectFit="cover"
@@ -419,37 +421,70 @@ const Home: NextPage = () => {
                 direction={{ lg: 'row', md: 'row', sm: 'column' }}
               >
                 <WrapItem flexDirection={'column'}>
-                  <p>Features</p>
-                  <p>Pricing</p>
-                  <p>Services</p>
-                  <p>Partners</p>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Features
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Pricing</Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Services
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Partners
+                  </Text>
                 </WrapItem>
-                <WrapItem flexDirection={'column'}>
-                  <p>About Us</p>
-                  <p>Tutorials</p>
-                  <p>Resources</p>
-                  <p>Help Center</p>
-                  <p>Templates</p>
-                  <p>Case Studies</p>
+
+                <WrapItem
+                  ml={{ lg: '75px', md: '39px' }}
+                  flexDirection={'column'}
+                >
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    About Us
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Tutorials
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Resources
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Help Center
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Templates
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Case Studies
+                  </Text>
                 </WrapItem>
               </Wrap>
 
               <Wrap
-                ml={{ sm: '72px' }}
+                ml={{ lg: '92px', md: '39px', sm: '72px' }}
                 spacingX={{ sm: 0 }}
                 direction={{ lg: 'row', md: 'row', sm: 'column' }}
               >
                 <WrapItem flexDirection={'column'}>
-                  <p>Medium</p>
-                  <p>Twitter</p>
-                  <p>Facebook</p>
-                  <p>Instagram</p>
-                  <p>LinkedIn</p>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Medium</Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Twitter</Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Facebook
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Instagram
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    LinkedIn
+                  </Text>
                 </WrapItem>
-                <WrapItem flexDirection={'column'}>
-                  <p>Contact Us</p>
-                  <p>Slack</p>
-                  <p>Jobs</p>
+                <WrapItem
+                  ml={{ lg: '75px', md: '39px' }}
+                  flexDirection={'column'}
+                >
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
+                    Contact Us
+                  </Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Slack</Text>
+                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Jobs</Text>
                 </WrapItem>
               </Wrap>
             </Flex>
