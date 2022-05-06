@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Heading, Image } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Image, List } from '@chakra-ui/react'
+import { NavItem } from './navitem'
 
 export const Header = () => {
   return (
@@ -25,9 +26,30 @@ export const Header = () => {
           NinjaMail
         </Heading>
       </Flex>
-      <Box></Box>
-      <Box>
+
+      <Flex justify={'center'} align={'center'}>
+        <Box as="nav">
+          <Flex
+            as={List}
+            hidden={false}
+            fontFamily={'text'}
+            fontWeight={800}
+            fontSize={{ lg: '17px', md: '11px' }}
+            lineHeight={{ lg: '20px', md: '13px' }}
+            sx={{
+              '@media (max-width: 320px)': {
+                display: 'none',
+              },
+            }}
+          >
+            <NavItem pr={0.5} ml={{ lg: '38px', md: '36px' }} name="FEATURES" />
+            <NavItem pr={3} ml={{ lg: '38px', md: '36px' }} name="PRICING" />
+            <NavItem pr={1} ml={{ lg: '38px', md: '36px' }} name="SERVICES" />
+            <NavItem pr={0.3} ml={{ lg: '38px', md: '36px' }} name="PARTNERS" />
+          </Flex>
+        </Box>
         <Button
+          ml={{ lg: '31px', md: '20px ' }}
           lineHeight={'13px'}
           fontSize="11px"
           fontFamily={'text'}
@@ -38,7 +60,7 @@ export const Header = () => {
         >
           SIGN UP FREE
         </Button>
-      </Box>
+      </Flex>
     </Flex>
   )
 }
