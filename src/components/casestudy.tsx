@@ -20,8 +20,8 @@ const CaseStudy = ({ description, name }: ICaseStudyProps) => {
   return (
     <Box
       sx={caseStudyStyles}
-      w={{ xl: '341px ', md: '223px', sm: '223px' }}
-      h={{ xl: '239px ', md: '157px', sm: '157px' }}
+      w={{ lg: '341px ', md: '223px', sm: '223px' }}
+      h={{ lg: '239px ', md: '157px', sm: '157px' }}
     >
       <Heading
         lineHeight={'26px'}

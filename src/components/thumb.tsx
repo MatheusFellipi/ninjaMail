@@ -25,8 +25,8 @@ const Thumb = ({ description, href, img, mr, ml, mt, mb }: IThumbProps) => {
 
   return (
     <Box
-      w={{ xl: 320, md: 209.28, sm: 209 }}
-      h={{ xl: 198, md: 290.16, sm: 294 }}
+      w={{ lg: '320px', md: '209.29px', sm: '209.29px' }}
+      h={{ lg: '449px', md: '290.16px', sm: '290.16px' }}
       mr={mr}
       ml={ml}
       mt={mt}
