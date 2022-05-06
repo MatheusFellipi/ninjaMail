@@ -22,12 +22,18 @@ const Home: NextPage = () => {
   return (
     <>
       <Header />
+
       <Flex
         as={'section'}
-        justify={{ md: 'center', sm: 'center' }}
         bgImage={{ md: "url('/img/bg2.png')" }}
+        bgPosition={{
+          lg: 'bottom -6rem right 14rem',
+          md: 'bottom -23px right',
+        }}
         bgRepeat="no-repeat"
-        h={{ lg: '631.5px', md: '450px', sm: '324.22px' }}
+        bgSize={{ lg: 'auto', md: 'cover' }}
+        justify={{ md: 'center', sm: 'center' }}
+        h={{ lg: '625.5px', md: '450px', sm: '324.22px' }}
       >
         <Box
           mt={'8px'}
@@ -112,157 +118,172 @@ const Home: NextPage = () => {
           </Box>
         </Box>
       </Flex>
-
-      <Flex justify={'center'} justifyContent={'center'} mt={'41.78px'}>
-        <Video />
-      </Flex>
-
-      <Flex
-        mt={{ lg: '98px', md: '64px', sm: '33px' }}
-        justifyContent={'center'}
-        p={2}
-        alignItems="center"
-        w={'100%'}
+      <Box
+        bgImage={{
+          lg: "url('/img/bg24.png')",
+          md: "url('/img/bgMD.png')",
+          sm: "url('/img/bgSM.png')",
+        }}
+        bgPosition={{
+          lg: 'bottom -12rem right 0.4rem',
+          md: 'bottom -31rem right -53rem',
+          sm: 'top -41rem right -35rem',
+        }}
+        bgRepeat="no-repeat"
+        pt={{ lg: 20, md: 20 }}
       >
+        <Flex justify={'center'} justifyContent={'center'} mt={'41.78px'}>
+          <Video />
+        </Flex>
+
         <Flex
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-          maxW={{ lg: '1098px', md: '710px', sm: '302px' }}
+          mt={{ lg: '98px', md: '64px', sm: '33px' }}
+          justifyContent={'center'}
+          p={2}
+          alignItems="center"
+          w={'100%'}
+        >
+          <Flex
+            flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+            maxW={{ lg: '1098px', md: '710px', sm: '302px' }}
+          >
+            <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
+              <Thumb
+                description="Launch campaigns but also find new customers. Our unique platform handles campaigns from start to end."
+                href="#"
+                img="thumb"
+              />
+              <Thumb
+                ml={{ lg: '47px', md: '30.71px', sm: '92.71px' }}
+                mt={{ lg: '88px', md: '57.84px', sm: '14.84px' }}
+                mr={{ lg: '46px', md: '29px', sm: '0' }}
+                description="Start building and sharing with your team today. NinjaMail is renowned for its industry leading team collaboration tools."
+                href="#"
+                img="thumb2"
+              />
+            </Flex>
+
+            <Box
+              ml={{ lg: '0', md: '0', sm: '28px ' }}
+              mt={{ lg: '138px', md: '90px', sm: '14.84px' }}
+            >
+              <Box
+                mt={'18px'}
+                as="h1"
+                fontFamily={'heading'}
+                fontWeight={900}
+                fontSize={{ lg: '44px ', md: '28px', sm: '28px' }}
+                lineHeight={{ lg: '48px', md: '31px', sm: '31px' }}
+                maxW={{ lg: '365px', md: '232px', sm: '232px' }}
+              >
+                The source for proven, engaging email campaigns
+              </Box>
+              <Box
+                as="p"
+                mt={'17px'}
+                fontFamily={'text'}
+                fontWeight={500}
+                fontSize={{ lg: '19px ', md: '12px', sm: '12px' }}
+                lineHeight={{ lg: '26px', md: '16px', sm: '16px' }}
+                maxW={{ lg: '322px ', md: '232px', sm: '203px' }}
+              >
+                Whether you’re a startup, small business, e-commerce store, or
+                want to promote your app, NinjaMail has the feature set tailored
+                for your business.
+              </Box>
+            </Box>
+          </Flex>
+        </Flex>
+
+        <Flex
+          flexDirection={'column'}
+          align={'center'}
+          justify={'center'}
+          mt={{ lg: '133px', md: '87px', sm: '80px' }}
         >
           <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
-            <Thumb
-              description="Launch campaigns but also find new customers. Our unique platform handles campaigns from start to end."
-              href="#"
-              img="thumb"
-            />
-            <Thumb
-              ml={{ lg: '47px', md: '30.71px', sm: '92.71px' }}
-              mt={{ lg: '88px', md: '57.84px', sm: '14.84px' }}
-              mr={{ lg: '46px', md: '29px', sm: '0' }}
-              description="Start building and sharing with your team today. NinjaMail is renowned for its industry leading team collaboration tools."
-              href="#"
-              img="thumb"
-            />
+            <Stack
+              direction={{ lg: 'row', md: 'row', sm: 'column' }}
+              spacing="21px"
+            >
+              <CaseStudy description="Member since 2012" name="Frankie" />
+              <CaseStudy description="Member since 2016" name="Camile" />
+              <CaseStudy description="Member since 2018" name="Elayne" />
+            </Stack>
           </Flex>
 
           <Box
-            ml={{ lg: '0', md: '0', sm: '28px ' }}
-            mt={{ lg: '138px', md: '90px', sm: '14.84px' }}
-          >
-            <Box
-              mt={'18px'}
-              as="h1"
-              fontFamily={'heading'}
-              fontWeight={900}
-              fontSize={{ lg: '44px ', md: '28px', sm: '28px' }}
-              lineHeight={{ lg: '48px', md: '31px', sm: '31px' }}
-              maxW={{ lg: '365px', md: '232px', sm: '232px' }}
-            >
-              The source for proven, engaging email campaigns
-            </Box>
-            <Box
-              as="p"
-              mt={'17px'}
-              fontFamily={'text'}
-              fontWeight={500}
-              fontSize={{ lg: '19px ', md: '12px', sm: '12px' }}
-              lineHeight={{ lg: '26px', md: '16px', sm: '16px' }}
-              maxW={{ lg: '322px ', md: '232px', sm: '203px' }}
-            >
-              Whether you’re a startup, small business, e-commerce store, or
-              want to promote your app, NinjaMail has the feature set tailored
-              for your business.
-            </Box>
-          </Box>
-        </Flex>
-      </Flex>
-
-      <Flex
-        flexDirection={'column'}
-        align={'center'}
-        justify={'center'}
-        mt={{ lg: '133px', md: '87px', sm: '47px' }}
-      >
-        <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
-          <Stack
-            direction={{ lg: 'row', md: 'row', sm: 'column' }}
-            spacing="21px"
-          >
-            <CaseStudy description="Member since 2012" name="Frankie" />
-            <CaseStudy description="Member since 2016" name="Camile" />
-            <CaseStudy description="Member since 2018" name="Elayne" />
-          </Stack>
-        </Flex>
-
-        <Box
-          as="h1"
-          mt={{ lg: '40px', md: '25px', sm: '59px  ' }}
-          maxW={{ lg: '690px', md: '544px', sm: '225px' }}
-          maxH={{ lg: '126px ', md: '89px', sm: '155px' }}
-          lineHeight={{ lg: '48px ', md: '38px', sm: '36px' }}
-          fontSize={{ lg: '44px', md: '28px', sm: '26px' }}
-          fontFamily={'heading'}
-          fontWeight={'black'}
-          textAlign="center"
-        >
-          Learn how others are reaching their audience easier than ever before.
-        </Box>
-
-        <Flex
-          mt={{ lg: '15px', sm: '15px' }}
-          justify={{ md: 'space-around', sm: 'center' }}
-          align={{ md: 'start', sm: 'center' }}
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-          maxW={{ lg: '668px', md: '438px', sm: '223px' }}
-          maxH={{ lg: '110px ', md: '70px', sm: '111px' }}
-        >
-          <Flex
-            textAlign="center"
-            flexDirection={'column'}
-            alignItems={{
-              lg: 'flex-start',
-              md: 'flex-start',
-              sm: 'center',
-            }}
-          >
-            <Input
-              type="text"
-              mr={{ lg: '27px', md: '17px', sm: '0px' }}
-              w={{ lg: '420px', md: '275px', sm: '223px ' }}
-              h={{ lg: '65px', md: '42px', sm: '42px ' }}
-              borderRadius={5}
-              borderColor={'gray.600'}
-              placeholder="Enter your email"
-              _placeholder={{
-                color: '#000',
-              }}
-            />
-            <Box
-              as="p"
-              w={{ lg: '254px', md: '157px', sm: '142px ' }}
-              h={{ lg: '25px', md: '15px', sm: '14px ' }}
-              fontSize={{ lg: '21px', md: '13px ', sm: '12px ' }}
-              mt={{ sm: '6px' }}
-              color={'green'}
-            >
-              Thanks! Email received
-            </Box>
-          </Flex>
-
-          <Button
-            mt={{ md: '0', sm: '7px' }}
-            borderRadius={0}
-            w={{ lg: '221px', md: '144px', sm: '144px' }}
-            h={{ lg: '65px', md: '42px', sm: '42px ' }}
-            fontSize={{ lg: '21px', md: '13px', sm: '13px ' }}
-            lineHeight={'15px'}
+            as="h1"
+            mt={{ lg: '40px', md: '25px', sm: '59px  ' }}
+            maxW={{ lg: '690px', md: '544px', sm: '225px' }}
+            maxH={{ lg: '126px ', md: '89px', sm: '155px' }}
+            lineHeight={{ lg: '48px ', md: '38px', sm: '36px' }}
+            fontSize={{ lg: '44px', md: '28px', sm: '26px' }}
+            fontFamily={'heading'}
             fontWeight={'black'}
-            bgColor={'#62be93'}
-            color={'white'}
+            textAlign="center"
           >
-            JOIN OUR LIST
-          </Button>
+            Learn how others are reaching their audience easier than ever
+            before.
+          </Box>
+
+          <Flex
+            mt={{ lg: '15px', sm: '15px' }}
+            justify={{ md: 'space-around', sm: 'center' }}
+            align={{ md: 'start', sm: 'center' }}
+            flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+            maxW={{ lg: '668px', md: '438px', sm: '223px' }}
+            maxH={{ lg: '110px ', md: '70px', sm: '111px' }}
+          >
+            <Flex
+              textAlign="center"
+              flexDirection={'column'}
+              alignItems={{
+                lg: 'flex-start',
+                md: 'flex-start',
+                sm: 'center',
+              }}
+            >
+              <Input
+                type="text"
+                mr={{ lg: '27px', md: '17px', sm: '0px' }}
+                w={{ lg: '420px', md: '275px', sm: '223px ' }}
+                h={{ lg: '65px', md: '42px', sm: '42px ' }}
+                borderRadius={5}
+                borderColor={'gray.600'}
+                placeholder="Enter your email"
+                _placeholder={{
+                  color: '#000',
+                }}
+              />
+              <Box
+                as="p"
+                w={{ lg: '254px', md: '157px', sm: '142px ' }}
+                h={{ lg: '25px', md: '15px', sm: '14px ' }}
+                fontSize={{ lg: '21px', md: '13px ', sm: '12px ' }}
+                mt={{ sm: '6px' }}
+                color={'green'}
+              >
+                Thanks! Email received
+              </Box>
+            </Flex>
+
+            <Button
+              mt={{ md: '0', sm: '7px' }}
+              borderRadius={0}
+              w={{ lg: '221px', md: '144px', sm: '144px' }}
+              h={{ lg: '65px', md: '42px', sm: '42px ' }}
+              fontSize={{ lg: '21px', md: '13px', sm: '13px ' }}
+              lineHeight={'15px'}
+              fontWeight={'black'}
+              bgColor={'#62be93'}
+              color={'white'}
+            >
+              JOIN OUR LIST
+            </Button>
+          </Flex>
         </Flex>
-      </Flex>
+      </Box>
 
       <Flex
         justify={'center'}
