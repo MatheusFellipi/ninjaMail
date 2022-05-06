@@ -6,13 +6,9 @@ interface IThumbProps {
   description: string
   href: string
   img: string
-  mr?: object | number | string
-  ml?: object | number | string
-  mt?: object | number | string
-  mb?: object | number | string
 }
 
-const Thumb = ({ description, href, img, mr, ml, mt, mb }: IThumbProps) => {
+const Thumb = ({ description, href, img, ...rest }: IThumbProps) => {
   const [link, setLink] = useState('#')
 
   useEffect(() => {
@@ -27,12 +23,9 @@ const Thumb = ({ description, href, img, mr, ml, mt, mb }: IThumbProps) => {
     <Box
       w={{ lg: '320px', md: '209.29px', sm: '209.29px' }}
       h={{ lg: '449px', md: '290.16px', sm: '290.16px' }}
-      mr={mr}
-      ml={ml}
-      mt={mt}
-      mb={mb}
       borderWidth="1px"
       shadow={'lg'}
+      {...rest}
     >
       <Image src={`/img/${img}.png`} alt="thumb.png" />
 
