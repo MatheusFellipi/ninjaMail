@@ -24,25 +24,24 @@ export const Video = () => {
     >
       <Box sx={basicBoxStyles} w={'100%'}>
         <Heading
-          lineHeight={'29px'}
-          fontSize={'22px'}
+          lineHeight={{ lg: '80px', md: '51px', sm: '29px' }}
+          fontSize={{ lg: '60px', md: '38px', sm: '22px' }}
           fontFamily={'heading'}
-          borderRadius={0}
-          w={'241px'}
-          h={'29px'}
+          w={{ lg: '656px', md: '415px', sm: '241px' }}
+          h={{ lg: '80px', md: '51px', sm: '29px' }}
         >
           Reach More Customers
         </Heading>
 
         <Button
-          mt={20.58}
-          w={'65px'}
-          h={'21px'}
+          w={{ lg: '200px', md: '132px', sm: '65px' }}
+          h={{ lg: '65px  ', md: '42px', sm: '21px' }}
+          fontSize={{ lg: '21px', md: '13px', sm: '6px' }}
+          lineHeight={{ lg: '25px', md: '15px', sm: '7px' }}
+          mt={{ lg: '80px', md: '41.56px', sm: '20.58px' }}
           color={'green'}
           bgColor={'white'}
           borderRadius={0}
-          fontSize="6px"
-          lineHeight={'7px'}
           fontStyle={'normal'}
           fontFamily={'text'}
           fontWeight={'black'}
