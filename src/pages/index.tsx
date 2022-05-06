@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import {
   Box,
   Button,
+  Center,
   Divider,
   Flex,
   Heading,
@@ -116,7 +117,7 @@ const Home: NextPage = () => {
       </Flex>
 
       <Flex
-        mt={33}
+        mt={{ lg: '98px', md: '64px', sm: '33px' }}
         justifyContent={'center'}
         p={2}
         alignItems="center"
@@ -151,9 +152,9 @@ const Home: NextPage = () => {
               as="h1"
               fontFamily={'heading'}
               fontWeight={900}
-              fontSize={'28px'}
-              lineHeight={'31px'}
-              maxW={{ lg: 1098, md: 710, sm: 232 }}
+              fontSize={{ lg: '44px ', md: '28px', sm: '28px' }}
+              lineHeight={{ lg: '48px', md: '31px', sm: '31px' }}
+              maxW={{ lg: '365px', md: '232px', sm: '232px' }}
             >
               The source for proven, engaging email campaigns
             </Box>
@@ -162,9 +163,9 @@ const Home: NextPage = () => {
               mt={'17px'}
               fontFamily={'text'}
               fontWeight={500}
-              fontSize={'12px'}
-              lineHeight={'16px'}
-              maxW={{ lg: 1098, md: 710, sm: 203 }}
+              fontSize={{ lg: '19px ', md: '12px', sm: '12px' }}
+              lineHeight={{ lg: '26px', md: '16px', sm: '16px' }}
+              maxW={{ lg: '322px ', md: '232px', sm: '203px' }}
             >
               Whether you’re a startup, small business, e-commerce store, or
               want to promote your app, NinjaMail has the feature set tailored
@@ -177,16 +178,13 @@ const Home: NextPage = () => {
       <Flex
         flexDirection={'column'}
         align={'center'}
-        mt={{ lg: 133, md: 87, sm: 47 }}
+        justify={'center'}
+        mt={{ lg: '133px', md: '87px', sm: '47px' }}
       >
-        <Flex
-          w={{ lg: '1089px ', md: '708px', sm: '239px' }}
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-        >
+        <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}>
           <Stack
             direction={{ lg: 'row', md: 'row', sm: 'column' }}
             spacing="21px"
-            w={{ lg: '1089px ', md: '708px', sm: '239px' }}
           >
             <CaseStudy description="Member since 2012" name="Frankie" />
             <CaseStudy description="Member since 2016" name="Camile" />
@@ -194,76 +192,75 @@ const Home: NextPage = () => {
           </Stack>
         </Flex>
 
-        <Box>
-          <Box
-            as="h1"
-            maxW={{ lg: '850px ', md: '544px', sm: '225px' }}
-            h={{ lg: '126px ', md: '89px', sm: '155px' }}
-            mt={'59px'}
-            fontFamily={'heading'}
-            fontWeight={'black'}
-            textAlign="center"
-            lineHeight={{ lg: '48px ', md: '38px', sm: '36px' }}
-            fontSize={{ lg: '44px', md: '28px', sm: '26px' }}
-          >
-            Learn how others are reaching their audience easier than ever
-            before.
-          </Box>
-          <Flex
-            mt={'5px'}
-            justify={{ md: 'space-around', sm: 'center' }}
-            align={{ md: 'start', sm: 'center' }}
-            flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-            maxW={{ lg: '668px', md: '438px', sm: '223px' }}
-          >
-            <Flex
-              mt={'5px'}
-              textAlign="center"
-              flexDirection={'column'}
-              alignItems={{
-                lg: 'flex-start',
-                md: 'flex-start',
-                sm: 'center',
-              }}
-            >
-              <Input
-                type="text"
-                w={{ lg: '420px', md: '275px', sm: '223px ' }}
-                h={{ lg: '65px', md: '42px', sm: '42px ' }}
-                borderRadius={5}
-                borderColor={'gray.600'}
-                placeholder="Enter your email"
-                _placeholder={{
-                  color: '#000',
-                }}
-              />
-              <Box
-                as="p"
-                w={{ lg: '254px', md: '157px', sm: '142px ' }}
-                h={{ lg: '25px', md: '15px', sm: '14px ' }}
-                fontSize={{ lg: '21px', md: '13px ', sm: '12px ' }}
-                mt={'6px'}
-                color={'green'}
-              >
-                Thanks! Email received
-              </Box>
-            </Flex>
-
-            <Button
-              mt={'7px'}
-              borderRadius={0}
-              w={'131px'}
-              h={{ lg: '65px', md: '42px', sm: '42px ' }}
-              fontSize={'13px'}
-              lineHeight={'15px'}
-              fontWeight={'black'}
-              bgColor={'#4BA87D'}
-              color={'white'}
-            >
-              JOIN OUR LIST
-            </Button>
-          </Flex>
+        <Box
+          as="h1"
+          mt={{ lg: '40px', md: '25px', sm: '59px  ' }}
+          maxW={{ lg: '690px', md: '544px', sm: '225px' }}
+          maxH={{ lg: '126px ', md: '89px', sm: '155px' }}
+          lineHeight={{ lg: '48px ', md: '38px', sm: '36px' }}
+          fontSize={{ lg: '44px', md: '28px', sm: '26px' }}
+          fontFamily={'heading'}
+          fontWeight={'black'}
+          textAlign="center"
+        >
+          Learn how others are reaching their audience easier than ever before.
         </Box>
+
+        <Flex
+          mt={{ lg: '15px' }}
+          justify={{ md: 'space-around', sm: 'center' }}
+          align={{ md: 'start', sm: 'center' }}
+          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
+          maxW={{ lg: '668px', md: '438px', sm: '223px' }}
+          maxH={{ lg: '110px ', md: '70px', sm: '111px' }}
+        >
+          <Flex
+            textAlign="center"
+            flexDirection={'column'}
+            alignItems={{
+              lg: 'flex-start',
+              md: 'flex-start',
+              sm: 'center',
+            }}
+          >
+            <Input
+              type="text"
+              mr={{ lg: '27px', md: '', sm: '' }}
+              w={{ lg: '420px', md: '275px', sm: '223px ' }}
+              h={{ lg: '65px', md: '42px', sm: '42px ' }}
+              borderRadius={5}
+              borderColor={'gray.600'}
+              placeholder="Enter your email"
+              _placeholder={{
+                color: '#000',
+              }}
+            />
+            <Box
+              as="p"
+              w={{ lg: '254px', md: '157px', sm: '142px ' }}
+              h={{ lg: '25px', md: '15px', sm: '14px ' }}
+              fontSize={{ lg: '21px', md: '13px ', sm: '12px ' }}
+              mt={'6px'}
+              color={'green'}
+            >
+              Thanks! Email received
+            </Box>
+          </Flex>
+
+          <Button
+            mt={{ sm: '7px' }}
+            borderRadius={0}
+            w={{ lg: '221px', md: '144px', sm: '144px' }}
+            h={{ lg: '65px', md: '42px', sm: '42px ' }}
+            fontSize={{ lg: '21px', md: '13px', sm: '13px ' }}
+            lineHeight={'15px'}
+            fontWeight={'black'}
+            bgColor={'#62be93'}
+            color={'white'}
+          >
+            JOIN OUR LIST
+          </Button>
+        </Flex>
       </Flex>
 
       <Flex
@@ -457,7 +454,14 @@ const Home: NextPage = () => {
           </Flex>
         </Flex>
 
-        <Divider h={'1px'} colorScheme="#DBDBDB" orientation="horizontal" />
+        <Center>
+          <Divider
+            colorScheme="#DBDBDB"
+            w={{ lg: '1088px', md: '711px', sm: '286px' }}
+            h={{ lg: '2px', md: '1px', sm: '1px' }}
+            orientation="horizontal"
+          />
+        </Center>
 
         <Flex
           mt={{ lg: '39px', md: '25px', sm: '22px' }}
