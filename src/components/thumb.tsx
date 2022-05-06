@@ -25,6 +25,7 @@ export const Thumb = ({ description, href, img, ...rest }: IThumbProps) => {
       h={{ lg: '449px', md: '290.16px', sm: '290.16px' }}
       borderWidth="1px"
       shadow={'lg'}
+      bgColor={'white'}
       {...rest}
     >
       <Image src={`/img/${img}.png`} alt="thumb.png" />
