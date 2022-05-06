@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading } from '@chakra-ui/react'
 
-const Video = () => {
+export const Video = () => {
   const basicBoxStyles = {
     display: 'flex',
     alignItems: 'center',
@@ -53,5 +53,3 @@ const Video = () => {
     </Flex>
   )
 }
-
-export default Video

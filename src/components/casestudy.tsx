@@ -5,7 +5,7 @@ interface ICaseStudyProps {
   name: string
 }
 
-const CaseStudy = ({ description, name }: ICaseStudyProps) => {
+export const CaseStudy = ({ description, name }: ICaseStudyProps) => {
   const caseStudyStyles = {
     display: 'flex',
     alignItems: 'start',
@@ -45,5 +45,3 @@ const CaseStudy = ({ description, name }: ICaseStudyProps) => {
     </Box>
   )
 }
-
-export default CaseStudy

@@ -8,7 +8,7 @@ interface IThumbProps {
   img: string
 }
 
-const Thumb = ({ description, href, img, ...rest }: IThumbProps) => {
+export const Thumb = ({ description, href, img, ...rest }: IThumbProps) => {
   const [link, setLink] = useState('#')
 
   useEffect(() => {
@@ -55,5 +55,3 @@ const Thumb = ({ description, href, img, ...rest }: IThumbProps) => {
     </Box>
   )
 }
-
-export default Thumb

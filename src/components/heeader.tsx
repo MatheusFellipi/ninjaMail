@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, Image } from '@chakra-ui/react'
 
-const Header = () => {
+export const Header = () => {
   return (
     <Flex
       as={'header'}
@@ -42,5 +42,3 @@ const Header = () => {
     </Flex>
   )
 }
-
-export default Header

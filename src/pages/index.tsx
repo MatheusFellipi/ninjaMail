@@ -12,10 +12,10 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'
-import Header from '../components/heeader'
-import Video from '../components/video'
-import Thumb from '../components/thumb'
-import CaseStudy from '../components/casestudy'
+import { Header } from '../components/heeader'
+import { Video } from '../components/video'
+import { Thumb } from '../components/thumb'
+import { CaseStudy } from '../components/casestudy'
 
 const Home: NextPage = () => {
   return (
@@ -207,7 +207,7 @@ const Home: NextPage = () => {
         </Box>
 
         <Flex
-          mt={{ lg: '15px' }}
+          mt={{ lg: '15px', sm: '15px' }}
           justify={{ md: 'space-around', sm: 'center' }}
           align={{ md: 'start', sm: 'center' }}
           flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
@@ -225,7 +225,7 @@ const Home: NextPage = () => {
           >
             <Input
               type="text"
-              mr={{ lg: '27px', md: '', sm: '' }}
+              mr={{ lg: '27px', md: '17px', sm: '0px' }}
               w={{ lg: '420px', md: '275px', sm: '223px ' }}
               h={{ lg: '65px', md: '42px', sm: '42px ' }}
               borderRadius={5}
@@ -240,7 +240,7 @@ const Home: NextPage = () => {
               w={{ lg: '254px', md: '157px', sm: '142px ' }}
               h={{ lg: '25px', md: '15px', sm: '14px ' }}
               fontSize={{ lg: '21px', md: '13px ', sm: '12px ' }}
-              mt={'6px'}
+              mt={{ sm: '6px' }}
               color={'green'}
             >
               Thanks! Email received
@@ -248,7 +248,7 @@ const Home: NextPage = () => {
           </Flex>
 
           <Button
-            mt={{ sm: '7px' }}
+            mt={{ md: '0', sm: '7px' }}
             borderRadius={0}
             w={{ lg: '221px', md: '144px', sm: '144px' }}
             h={{ lg: '65px', md: '42px', sm: '42px ' }}
@@ -286,6 +286,7 @@ const Home: NextPage = () => {
         >
           All the best brands already use us.
         </Box>
+
         <Flex
           mt={{ lg: '', md: 'px', sm: '40px' }}
           flexWrap={{ sm: 'wrap' }}
@@ -374,6 +375,7 @@ const Home: NextPage = () => {
           PICK A PLAN
         </Button>
       </Flex>
+
       <Box as="footer">
         <Flex
           flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
