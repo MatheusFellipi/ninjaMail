@@ -1,3 +1,8 @@
+## Ninja Mail
+
+![site](https://user-images.githubusercontent.com/47674343/167926674-3d2268d3-97ca-4108-8bbd-0c67ffb2d8dd.gif)
+
+
 ## Tecnologia usada
 
 * Front-end
