@@ -1,22 +1,10 @@
 import type { NextPage } from 'next'
-import {
-  Box,
-  Button,
-  Center,
-  Divider,
-  Flex,
-  Heading,
-  Image,
-  Input,
-  Stack,
-  Text,
-  Wrap,
-  WrapItem,
-} from '@chakra-ui/react'
+import { Box, Button, Flex, Image, Input, Stack } from '@chakra-ui/react'
 import { Header } from '../components/heeader'
 import { Video } from '../components/video'
 import { Thumb } from '../components/thumb'
 import { CaseStudy } from '../components/casestudy'
+import { Footer } from '../components/footer'
 
 const Home: NextPage = () => {
   return (
@@ -64,7 +52,7 @@ const Home: NextPage = () => {
           >
             <Box
               as={'h1'}
-              maxW={{ lg: '489px', md: '315px', sm: '267px' }}
+              maxW={{ lg: '489px', md: '315px', sm: '277px' }}
               maxH={{ lg: '317px', md: '208px', sm: '138px' }}
               fontFamily={'heading'}
               fontWeight={'black'}
@@ -98,6 +86,9 @@ const Home: NextPage = () => {
                 fontWeight={'black'}
                 bgColor={'#4BA87D'}
                 color={'white'}
+                _hover={{
+                  filter: 'brightness(0.9)',
+                }}
               >
                 TRY NOW
               </Button>
@@ -118,16 +109,17 @@ const Home: NextPage = () => {
           </Box>
         </Box>
       </Flex>
+
       <Box
         bgImage={{
-          lg: "url('/img/bg24.png')",
+          lg: "url('/img/bgLG.png')",
           md: "url('/img/bgMD.png')",
           sm: "url('/img/bgSM.png')",
         }}
         bgPosition={{
-          lg: 'bottom -12rem right 0.4rem',
+          lg: 'bottom -12rem right 0.2rem',
           md: 'bottom -31rem right -53rem',
-          sm: 'top -41rem right -35rem',
+          sm: 'top -39rem right -35rem',
         }}
         bgRepeat="no-repeat"
         pt={{ lg: 20, md: 20 }}
@@ -215,7 +207,7 @@ const Home: NextPage = () => {
           <Box
             as="h1"
             mt={{ lg: '40px', md: '25px', sm: '59px  ' }}
-            maxW={{ lg: '690px', md: '544px', sm: '225px' }}
+            maxW={{ lg: '781px', md: '544px', sm: '225px' }}
             maxH={{ lg: '126px ', md: '89px', sm: '155px' }}
             lineHeight={{ lg: '48px ', md: '38px', sm: '36px' }}
             fontSize={{ lg: '44px', md: '28px', sm: '26px' }}
@@ -278,6 +270,9 @@ const Home: NextPage = () => {
               fontWeight={'black'}
               bgColor={'#62be93'}
               color={'white'}
+              _hover={{
+                filter: 'brightness(0.9)',
+              }}
             >
               JOIN OUR LIST
             </Button>
@@ -399,175 +394,7 @@ const Home: NextPage = () => {
         </Button>
       </Flex>
 
-      <Box as="footer">
-        <Flex
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-          mb={{ lg: '56.14px', md: '37.72px', sm: '11.72px' }}
-        >
-          <Flex
-            w={'155px'}
-            h={'52px'}
-            align={'center'}
-            mt={{ lg: '82px', md: '47px', sm: '47px' }}
-            ml={{ lg: '228px', md: '63px', sm: '17px' }}
-          >
-            <Box width={84} height={42} mt={'12px'}>
-              <Image src="/icon/ninjamail.svg" alt="ninjamail" />
-            </Box>
-
-            <Heading
-              fontSize="22px"
-              lineHeight={'26px'}
-              fontStyle={'normal'}
-              fontFamily={'text'}
-              h={'25px'}
-              fontWeight={'black'}
-              ml={'-10px'}
-            >
-              NinjaMail
-            </Heading>
-          </Flex>
-
-          <Flex
-            mt={{ lg: '79px', md: '51px', sm: '3.73px' }}
-            ml={{ lg: '194.61px', md: '128.97', sm: '17px' }}
-            fontWeight={'bold'}
-            fontFamily={'text'}
-            fontSize={{ lg: '19px', md: '"12px"', sm: '12px' }}
-            lineHeight={'14px'}
-          >
-            <Flex flexDirection={{ lg: 'row', md: 'row', sm: 'row' }}>
-              <Wrap
-                spacingX={{ sm: 0 }}
-                direction={{ lg: 'row', md: 'row', sm: 'column' }}
-              >
-                <WrapItem flexDirection={'column'}>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Features
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Pricing</Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Services
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Partners
-                  </Text>
-                </WrapItem>
-
-                <WrapItem
-                  ml={{ lg: '75px', md: '39px' }}
-                  flexDirection={'column'}
-                >
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    About Us
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Tutorials
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Resources
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Help Center
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Templates
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Case Studies
-                  </Text>
-                </WrapItem>
-              </Wrap>
-
-              <Wrap
-                ml={{ lg: '92px', md: '39px', sm: '72px' }}
-                spacingX={{ sm: 0 }}
-                direction={{ lg: 'row', md: 'row', sm: 'column' }}
-              >
-                <WrapItem flexDirection={'column'}>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Medium</Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Twitter</Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Facebook
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Instagram
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    LinkedIn
-                  </Text>
-                </WrapItem>
-                <WrapItem
-                  ml={{ lg: '75px', md: '39px' }}
-                  flexDirection={'column'}
-                >
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>
-                    Contact Us
-                  </Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Slack</Text>
-                  <Text mb={{ lg: '10px', md: '7px', sm: '7px' }}>Jobs</Text>
-                </WrapItem>
-              </Wrap>
-            </Flex>
-          </Flex>
-        </Flex>
-
-        <Center>
-          <Divider
-            colorScheme="#DBDBDB"
-            w={{ lg: '1088px', md: '711px', sm: '286px' }}
-            h={{ lg: '2px', md: '1px', sm: '1px' }}
-            orientation="horizontal"
-          />
-        </Center>
-
-        <Flex
-          mt={{ lg: '39px', md: '25px', sm: '22px' }}
-          flexDirection={{ lg: 'row', md: 'row', sm: 'column' }}
-          justify={'center'}
-          align={'cemter'}
-        >
-          <Box
-            as="p"
-            ml={'17px'}
-            mr={{ lg: '98px', md: '93px', sm: '0' }}
-            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
-            lineHeight={'18px'}
-            fontFamily={'text'}
-            fontWeight={700}
-            maxW={{ lg: '561px', md: '338px', sm: '186px' }}
-          >
-            NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All
-            rights reserved.
-          </Box>
-
-          <Box
-            as="p"
-            ml={'17px'}
-            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
-            mt={{ lg: '0', md: '0', sm: '14px' }}
-            mr={{ lg: '30px', md: '35px', sm: '0' }}
-            lineHeight={'18px'}
-            fontFamily={'text'}
-            fontWeight={700}
-            maxW={'186px'}
-          >
-            Terms & Conditions
-          </Box>
-          <Box
-            as="p"
-            ml={'17px'}
-            mb={{ lg: '39px', md: '30px', sm: '51px' }}
-            fontSize={{ lg: '15px', md: '9px', sm: '9px' }}
-            lineHeight={'19px'}
-            fontFamily={'text'}
-            fontWeight={700}
-            maxW={'186px'}
-          >
-            Privacy Policy
-          </Box>
-        </Flex>
-      </Box>
+      <Footer />
     </>
   )
 }
